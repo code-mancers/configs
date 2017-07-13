@@ -1,30 +1,36 @@
+Rails:
+  Enabled: true
+
 AllCops:
-  RunRailsCops: true
-  Excludes:
-    - db/**
+  # Exclude generated files
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+  TargetRubyVersion: 2.2
 
-HashSyntax:
-  Description: 'Use either hash rocket or 1.9 styled hashes.'
+Style/Documentation:
   Enabled: false
 
-LineLength:
-  Max: 100
+Style/RaiseArgs:
+  EnforcedStyle: compact
 
-# Disable Certain Tests
-
-Documentation:
-  Description: 'Document classes and non-namespace modules.'
+Style/IfUnlessModifier:
   Enabled: false
 
-StringLiterals:
-  Description: 'Checks if uses of quotes match the configured preference.'
+Style/IfInsideElse:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
   Enabled: false
 
 Encoding:
-  Description: 'Use UTF-8 as the source file encoding.'
   Enabled: false
-
-SignalException:
-  Description: 'Do not enforce use of fail when raising exceptions.'
-  # Valid values are: semantic, only_raise and only_fail
-  EnforcedStyle: only_raise
