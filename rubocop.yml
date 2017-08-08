@@ -34,3 +34,20 @@ Metrics/CyclomaticComplexity:
 
 Encoding:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*.rb"
+    - "config/**/*.rb"
+    - "lib/tasks/*.rake"
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*.rb"
+
+Style/VariableNumber:
+  EnforcedStyle: snake_case
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - "spec/**/*.rb"
